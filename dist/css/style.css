@@ -46,8 +46,7 @@ h1 {
   outline: none;
   border-radius: 0.4rem;
   font-size: 0.99rem;
-    border: 2px solid black;
-
+  border: 2px solid black;
 }
 
 #user_Percentage,
@@ -77,8 +76,18 @@ h1 {
 .changed_Hex {
   text-align: center;
   width: 100%;
-  padding: 1rem;
+  padding: 0.2rem;
   background-color: lavender;
   height: 100%;
   border-radius: 0.4rem;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.original_Hex_col,
+.changed_Hex_col {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
 }
