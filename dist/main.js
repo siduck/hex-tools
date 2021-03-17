@@ -1,1 +1,1 @@
-console.log("UWU");
+console.log("test");
