@@ -8,6 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
   </head>
 
   <body>
@@ -16,20 +21,28 @@
 
       <div class="main-div">
         <div class="colorChange_Btns">
- <div class="lightenBTn">Lighten</div>
-        <div class="darkenBtn">Darken</div>
+          <div class="lightenBTn">Lighten</div>
+          <div class="darkenBtn">Darken</div>
+        </div>
 
         <div class="inputCol">
+          <input type="text" id="user_Color" placeholder="enter hexcolor" />
 
+          <input type="text" id="user_Percentage" placeholder="enter percentage" />
 
+          <div class="run">        <i class="fas fa-play"></i>
+</div>
         </div>
-        <div class = "percentageCol">
 
-
+        <div class="show_Results">
+          <div class="original_Hex">
+            <h2>Original Hex color</h2>
+          </div>
+          <div class="changed_Hex">
+            <h2>Changed Hex color</h2>
+          </div>
         </div>
-
-        </div>
-             </div>
+      </div>
     </div>
     <script src="./dist/main.js"></script>
   </body>

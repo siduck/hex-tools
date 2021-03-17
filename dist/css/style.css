@@ -7,6 +7,10 @@ h1 {
   text-align: center;
 }
 
+.main-div {
+  width: 100%;
+}
+
 .colorChange_Btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,11 +21,64 @@ h1 {
 .darkenBtn {
   background-color: lavenderblush;
   border-radius: 0.6rem;
-  padding: 1rem;
+  padding: 1.4rem;
   text-align: center;
+  transition: ease 0.3s;
 }
 
 .lightenBtn:hover,
 .darkenBtn:hover {
   border: 0.2rem solid pink;
+}
+
+.inputCol {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 0.2fr;
+  grid-gap: 2rem;
+  margin: 4rem;
+}
+
+#user_Percentage,
+#user_Color {
+  width: 100%;
+  border: none;
+  padding: 1.3rem;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 0.99rem;
+    border: 2px solid black;
+
+}
+
+#user_Percentage,
+.run {
+  text-align: center;
+}
+
+.run {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 2px solid black;
+}
+
+.fa-play {
+  font-size: 1.3rem;
+}
+
+.show_Results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  margin: 2rem;
+}
+
+.original_Hex,
+.changed_Hex {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: lavender;
+  height: 100%;
+  border-radius: 0.4rem;
 }
