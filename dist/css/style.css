@@ -1,3 +1,27 @@
-body { 
-  background-color: pink;
+body {
+  font-family: "Overpass", sans-serif;
+  padding: 2rem 10rem 4rem 10rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.colorChange_Btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.lightenBtn,
+.darkenBtn {
+  background-color: lavenderblush;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.lightenBtn:hover,
+.darkenBtn:hover {
+  border: 0.2rem solid pink;
 }

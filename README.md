@@ -1,3 +1,3 @@
 # hex-tools
 
-a site with some misc utilities for lighten /darken hex color and much more 
+a site with some misc utilities for lighten /darken hex color , made for my personal use.
