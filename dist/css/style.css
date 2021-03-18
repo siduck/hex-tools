@@ -5,7 +5,24 @@ body {
 
 h1 {
   text-align: center;
-} .main-div { width: 100%; } .colorChange_Btns { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 2rem; } .lightenBtn, .darkenBtn { background-color: lavenderblush; border-radius: 0.6rem; padding: 1.4rem; text-align: center;
+}
+
+.main-div {
+  width: 100%;
+}
+
+.colorChange_Btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.lightenBtn,
+.darkenBtn {
+  background-color: lavenderblush;
+  border-radius: 0.6rem;
+  padding: 1.4rem;
+  text-align: center;
   transition: ease 0.3s;
 }
 
@@ -25,11 +42,11 @@ h1 {
 #user_Color {
   width: 100%;
   border: none;
-  padding: 1.3rem;
+  padding: 1.2rem;
   outline: none;
   border-radius: 0.4rem;
-  font-size: 0.99rem;
-  border: 2px solid black;
+  font-size: 1rem;
+  border: 2px solid #7b7b8f;
 }
 
 #user_Percentage,
@@ -51,7 +68,7 @@ h1 {
 .show_Results {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
+  grid-gap: 7rem;
   margin: 2rem;
 }
 
@@ -63,9 +80,13 @@ h1 {
   background-color: lavender;
   height: 100%;
   border-radius: 0.4rem;
-
+  color: #7b7b8f;
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+.original_Hex h2 , .changed_Hex h2 {
+  padding-top: 0.5rem;
 }
 
 .original_Hex_col,
