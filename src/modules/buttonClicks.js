@@ -25,11 +25,20 @@ runBtn.addEventListener("click", () => {
     col.value,
     parseInt(percentage.value) * -1
   );
-
 });
 
 [darkenBtn, lightenBtn].forEach((t) => {
   t.addEventListener("click", () => {
     tone = t.classList.value == "lightenBtn" ? "light" : "dark";
+
+    if (t.classList.value == "lightenBtn") {
+      lightenBtn.style.border = "2px solid black";
+      darkenBtn.style.borderWidth = "0px";
+    }
+
+    else {
+      darkenBtn.style.border = "2px solid black";
+      lightenBtn.style.borderWidth = "0px";
+    }
   });
 });
