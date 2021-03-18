@@ -5,24 +5,7 @@ body {
 
 h1 {
   text-align: center;
-}
-
-.main-div {
-  width: 100%;
-}
-
-.colorChange_Btns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-
-.lightenBtn,
-.darkenBtn {
-  background-color: lavenderblush;
-  border-radius: 0.6rem;
-  padding: 1.4rem;
-  text-align: center;
+} .main-div { width: 100%; } .colorChange_Btns { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 2rem; } .lightenBtn, .darkenBtn { background-color: lavenderblush; border-radius: 0.6rem; padding: 1.4rem; text-align: center;
   transition: ease 0.3s;
 }
 
