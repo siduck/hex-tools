@@ -11,20 +11,20 @@ runBtn.addEventListener("click", () => {
   let col = document.querySelector("#user_Color");
   let percentage = document.querySelector("#user_Percentage");
 
-  if (tone == "dark") {
+  if (tone == "light") {
     original_Hex_col.textContent = col.value;
     changed_Hex_col.textContent = adjustColor(
       col.value,
       parseInt(percentage.value)
     );
+  } else {
+    original_Hex_col.textContent = col.value;
+
+    changed_Hex_col.textContent = adjustColor(
+      col.value,
+      parseInt(percentage.value) * -1
+    );
   }
-
-  original_Hex_col.textContent = col.value;
-
-  changed_Hex_col.textContent = adjustColor(
-    col.value,
-    parseInt(percentage.value) * -1
-  );
 });
 
 [darkenBtn, lightenBtn].forEach((t) => {
@@ -34,9 +34,7 @@ runBtn.addEventListener("click", () => {
     if (t.classList.value == "lightenBtn") {
       lightenBtn.style.border = "4px dotted pink";
       darkenBtn.style.borderWidth = "0px";
-    }
-
-    else {
+    } else {
       darkenBtn.style.border = "4px dotted pink";
       lightenBtn.style.borderWidth = "0px";
     }
