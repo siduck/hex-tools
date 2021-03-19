@@ -33,7 +33,7 @@ h1 {
 
 .inputCol {
   display: grid;
-  grid-template-columns: 1fr 0.6fr 0.2fr;
+  grid-template-columns: 1fr 0.6fr 0.3fr 0.2fr;
   grid-gap: 2rem;
   margin: 4rem;
 }
@@ -52,6 +52,11 @@ h1 {
 #user_Percentage,
 .run {
   text-align: center;
+}
+
+.showCol_diff {
+  border: 2px solid #7b7b8f;
+  border-radius: 0.4rem;
 }
 
 .run {
