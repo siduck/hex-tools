@@ -11,19 +11,15 @@ runBtn.addEventListener("click", () => {
   let col = document.querySelector("#user_Color");
   let percentage = document.querySelector("#user_Percentage");
 
+  let ogCol = adjustColor(col.value, parseInt(percentage.value));
+  let newCol = adjustColor(col.value, parseInt(percentage.value) * -1);
+
   if (tone == "light") {
     original_Hex_col.textContent = col.value;
-    changed_Hex_col.textContent = adjustColor(
-      col.value,
-      parseInt(percentage.value)
-    );
+    changed_Hex_col.textContent = ogCol;
   } else {
     original_Hex_col.textContent = col.value;
-
-    changed_Hex_col.textContent = adjustColor(
-      col.value,
-      parseInt(percentage.value) * -1
-    );
+    changed_Hex_col.textContent = newCol;
   }
 });
 
