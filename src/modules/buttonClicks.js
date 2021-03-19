@@ -32,12 +32,12 @@ runBtn.addEventListener("click", () => {
     tone = t.classList.value == "lightenBtn" ? "light" : "dark";
 
     if (t.classList.value == "lightenBtn") {
-      lightenBtn.style.border = "2px solid black";
+      lightenBtn.style.border = "4px dotted pink";
       darkenBtn.style.borderWidth = "0px";
     }
 
     else {
-      darkenBtn.style.border = "2px solid black";
+      darkenBtn.style.border = "4px dotted pink";
       lightenBtn.style.borderWidth = "0px";
     }
   });

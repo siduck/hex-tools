@@ -85,7 +85,8 @@ h1 {
   grid-template-rows: 1fr 1fr;
 }
 
-.original_Hex h2 , .changed_Hex h2 {
+.original_Hex h2,
+.changed_Hex h2 {
   padding-top: 0.5rem;
 }
 
