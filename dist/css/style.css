@@ -55,8 +55,15 @@ h1 {
 }
 
 .showCol_diff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border: 2px solid #7b7b8f;
   border-radius: 0.4rem;
+}
+
+.ogCol,
+.newCol {
+  width: 100%;
 }
 
 .run {

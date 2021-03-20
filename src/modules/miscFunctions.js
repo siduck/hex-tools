@@ -11,3 +11,11 @@ export const adjustColor = (color, amount) => {
       )
   );
 };
+
+export const createColor_Shades = (ogcolor, newcolor) => {
+  let ogCol = document.querySelector(".ogCol");
+  let newcol = document.querySelector(".newCol");
+
+  ogCol.style.backgroundColor = ogcolor;
+  newcol.style.backgroundColor = newcolor;
+};

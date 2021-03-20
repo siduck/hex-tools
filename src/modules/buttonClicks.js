@@ -1,5 +1,5 @@
 import { tone } from "../index.js";
-import { adjustColor } from "./miscFunctions.js";
+import { adjustColor, createColor_Shades } from "./miscFunctions.js";
 import { changed_Hex_col, original_Hex_col } from "./divSelectors.js";
 
 let darkenBtn = document.querySelector(".darkenBtn");
@@ -13,6 +13,13 @@ runBtn.addEventListener("click", () => {
 
   let ogCol = adjustColor(col.value, parseInt(percentage.value));
   let newCol = adjustColor(col.value, parseInt(percentage.value) * -1);
+
+  ogCol = ogCol.replace(/\s+/g, " ").trim();
+  newCol = newCol.replace(/\s+/g, " ").trim();
+
+  console.log(ogCol , "  " , newCol);
+
+  createColor_Shades(ogCol, newCol);
 
   if (tone == "light") {
     original_Hex_col.textContent = col.value;
