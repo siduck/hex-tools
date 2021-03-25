@@ -13,23 +13,23 @@ runBtn.addEventListener("click", () => {
 
   // remove extra spaces from inputs
 
-  let tempColor = col.value.replace(/\s+/g, " ").trim();
+  let original_Color = col.value.replace(/\s+/g, " ").trim();
   let tempPercentage = percentage.value.replace(/\s+/g, " ").trim();
 
-  let ogCol = adjustColor(tempColor, parseInt(tempPercentage));
-  let newCol = adjustColor(tempColor, parseInt(tempPercentage) * -1);
+  let lighterCol = adjustColor(original_Color, parseInt(tempPercentage));
+  let darkerCol = adjustColor(original_Color, parseInt(tempPercentage) * -1);
 
-  ogCol = ogCol.replace(/\s+/g, " ").trim();
-  newCol = newCol.replace(/\s+/g, " ").trim();
-
-  createColor_Shades(ogCol, newCol);
+  lighterCol = lighterCol.replace(/\s+/g, " ").trim();
+  darkerCol = darkerCol.replace(/\s+/g, " ").trim();
 
   if (tone == "light") {
     original_Hex_col.textContent = col.value;
-    changed_Hex_col.textContent = ogCol;
+    changed_Hex_col.textContent = lighterCol;
+    createColor_Shades(original_Color, lighterCol);
   } else {
     original_Hex_col.textContent = col.value;
-    changed_Hex_col.textContent = newCol;
+    changed_Hex_col.textContent = darkerCol;
+    createColor_Shades(original_Color, darkerCol);
   }
 });
 

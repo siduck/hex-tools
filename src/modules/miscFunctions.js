@@ -12,10 +12,10 @@ export const adjustColor = (color, amount) => {
   );
 };
 
-export const createColor_Shades = (ogcolor, newcolor) => {
-  let ogCol = document.querySelector(".ogCol");
-  let newcol = document.querySelector(".newCol");
+export const createColor_Shades = (ogColor, newColor) => {
+  let ogCol_div = document.querySelector(".ogCol");
+  let newCol_div = document.querySelector(".newCol");
 
-  ogCol.style.backgroundColor = ogcolor;
-  newcol.style.backgroundColor = newcolor;
+  ogCol_div.style.backgroundColor = ogColor;
+  newCol_div.style.backgroundColor = newColor;
 };
