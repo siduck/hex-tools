@@ -11,13 +11,16 @@ runBtn.addEventListener("click", () => {
   let col = document.querySelector("#user_Color");
   let percentage = document.querySelector("#user_Percentage");
 
-  let ogCol = adjustColor(col.value, parseInt(percentage.value));
-  let newCol = adjustColor(col.value, parseInt(percentage.value) * -1);
+  // remove extra spaces from inputs
+
+  let tempColor = col.value.replace(/\s+/g, " ").trim();
+  let tempPercentage = percentage.value.replace(/\s+/g, " ").trim();
+
+  let ogCol = adjustColor(tempColor, parseInt(tempPercentage));
+  let newCol = adjustColor(tempColor, parseInt(tempPercentage) * -1);
 
   ogCol = ogCol.replace(/\s+/g, " ").trim();
   newCol = newCol.replace(/\s+/g, " ").trim();
-
-  console.log(ogCol , "  " , newCol);
 
   createColor_Shades(ogCol, newCol);
 
