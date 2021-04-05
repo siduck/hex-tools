@@ -1,6 +1,8 @@
 body {
   font-family: "Overpass", sans-serif;
   padding: 2rem 10rem 4rem 10rem;
+  background-color: #fffffc;
+  color: #394349;
 }
 
 h1 {
@@ -19,16 +21,25 @@ h1 {
 
 .lightenBtn,
 .darkenBtn {
-  background-color: lavenderblush;
   border-radius: 0.6rem;
   padding: 1.4rem;
   text-align: center;
   transition: ease 0.3s;
 }
 
+.lightenBtn {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.darkenBtn {
+  background-color: #394349;
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .lightenBtn:hover,
 .darkenBtn:hover {
   border: 0.2rem solid pink;
+  cursor: pointer;
 }
 
 .inputCol {
@@ -46,7 +57,7 @@ h1 {
   outline: none;
   border-radius: 0.4rem;
   font-size: 1rem;
-  border: 2px solid #7b7b8f;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #user_Percentage,
@@ -57,7 +68,7 @@ h1 {
 .showCol_diff {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid #7b7b8f;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 0.4rem;
 }
 
