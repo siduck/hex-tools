@@ -1,5 +1,10 @@
 import { tone } from "../index.js";
-import { adjustColor, createColor_Shades } from "./miscFunctions.js";
+import {
+  adjustColor,
+  createColor_Shades,
+  create_LighterShade,
+  create_DarkerShade,
+} from "./miscFunctions.js";
 import { changed_Hex_col, original_Hex_col } from "./divSelectors.js";
 
 let darkenBtn = document.querySelector(".darkenBtn");
@@ -9,28 +14,20 @@ let runBtn = document.querySelector(".run");
 
 runBtn.addEventListener("click", () => {
   let col = document.querySelector("#user_Color");
-  let percentage = document.querySelector("#user_Percentage");
 
   // remove extra spaces from inputs
 
   let original_Color = col.value.replace(/\s+/g, " ").trim();
-  let tempPercentage = percentage.value.replace(/\s+/g, " ").trim();
 
-  let lighterCol = adjustColor(original_Color, parseInt(tempPercentage));
-  let darkerCol = adjustColor(original_Color, parseInt(tempPercentage) * -1);
+  original_Hex_col.textContent = col.value;
 
-  lighterCol = lighterCol.replace(/\s+/g, " ").trim();
-  darkerCol = darkerCol.replace(/\s+/g, " ").trim();
+  changed_Hex_col = changed_Hex_col(tone == "light")
+    ? create_LighterShade()
+    : create_DarkerShade();
 
-  if (tone == "light") {
-    original_Hex_col.textContent = col.value;
-    changed_Hex_col.textContent = lighterCol;
-    createColor_Shades(original_Color, lighterCol);
-  } else {
-    original_Hex_col.textContent = col.value;
-    changed_Hex_col.textContent = darkerCol;
-    createColor_Shades(original_Color, darkerCol);
-  }
+  tone == "light"
+    ? createColor_Shades(original_Color, create_LighterShade())
+    : createColor_Shades(original_Color, create_DarkerShade());
 });
 
 [darkenBtn, lightenBtn].forEach((t) => {
