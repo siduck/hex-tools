@@ -1,4 +1,4 @@
-export const adjustColor = (color, amount) => {
+const adjustColor = (color, amount) => {
   return (
     "#" +
     color
@@ -20,32 +20,25 @@ export const createColor_Shades = (ogColor, newColor) => {
   newCol_div.style.backgroundColor = newColor;
 };
 
-export const create_LighterShade = () => {
+export const add_shade = (shadeName) => {
   let col = document.querySelector("#user_Color");
 
   let original_Color = col.value.replace(/\s+/g, " ").trim();
-
   let percentage = document.querySelector("#user_Percentage");
 
   let tempPercentage = percentage.value.replace(/\s+/g, " ").trim();
 
-  let lighterCol = adjustColor(original_Color, parseInt(tempPercentage));
+  let resultColor;
 
-  lighterCol = lighterCol.replace(/\s+/g, " ").trim();
+  if (shadeName == "light") {
+    resultColor = adjustColor(original_Color, parseInt(tempPercentage));
+    resultColor = resultColor.replace(/\s+/g, " ").trim();
 
-  return lighterCol;
-};
+    return resultColor;
+  }
 
-export const create_DarkerShade = () => {
-  let col = document.querySelector("#user_Color");
+  resultColor = adjustColor(original_Color, parseInt(tempPercentage) * -1);
+  resultColor = resultColor.replace(/\s+/g, " ").trim();
 
-  let original_Color = col.value.replace(/\s+/g, " ").trim();
-  let percentage = document.querySelector("#user_Percentage");
-
-  let tempPercentage = percentage.value.replace(/\s+/g, " ").trim(); // with removed spaces
-
-  let darkerCol = adjustColor(original_Color, parseInt(tempPercentage) * -1);
-
-  darkerCol = darkerCol.replace(/\s+/g, " ").trim();
-  return darkerCol;
+  return resultColor;
 };

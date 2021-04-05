@@ -1,10 +1,5 @@
 import { tone } from "../index.js";
-import {
-  adjustColor,
-  createColor_Shades,
-  create_LighterShade,
-  create_DarkerShade,
-} from "./miscFunctions.js";
+import { createColor_Shades, add_shade } from "./miscFunctions.js";
 import { changed_Hex_col, original_Hex_col } from "./divSelectors.js";
 
 let darkenBtn = document.querySelector(".darkenBtn");
@@ -21,13 +16,12 @@ runBtn.addEventListener("click", () => {
 
   original_Hex_col.textContent = col.value;
 
-  changed_Hex_col = changed_Hex_col(tone == "light")
-    ? create_LighterShade()
-    : create_DarkerShade();
+  changed_Hex_col.textContent =
+    tone == "light" ? add_shade("light") : add_shade("dark");
 
   tone == "light"
-    ? createColor_Shades(original_Color, create_LighterShade())
-    : createColor_Shades(original_Color, create_DarkerShade());
+    ? createColor_Shades(original_Color, add_shade("light"))
+    : createColor_Shades(original_Color, add_shade("dark"));
 });
 
 [darkenBtn, lightenBtn].forEach((t) => {
