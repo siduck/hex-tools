@@ -24,22 +24,19 @@ h1 {
   border-radius: 0.6rem;
   padding: 1.4rem;
   text-align: center;
-  transition: ease 0.3s;
-}
-
-.lightenBtn {
+  transition: all 0.3s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .darkenBtn {
   background-color: #394349;
   color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .lightenBtn:hover,
 .darkenBtn:hover {
-  border: 0.2rem solid pink;
   cursor: pointer;
+  color: #ff99c8;
 }
 
 .inputCol {
@@ -57,7 +54,14 @@ h1 {
   outline: none;
   border-radius: 0.4rem;
   font-size: 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#user_Color {
+  border: 3px solid #bbd0ff;
+}
+
+#user_Percentage {
+  background-color: #daffcc;
 }
 
 #user_Percentage,
@@ -82,7 +86,14 @@ h1 {
   text-align: center;
   padding: 1rem;
   border-radius: 0.4rem;
-  border: 2px solid black;
+  border: 3px solid #394349;
+  background-color: #fdffb6;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.run:hover {
+  cursor: pointer;
 }
 
 .fa-play {
@@ -107,6 +118,7 @@ h1 {
   color: #7b7b8f;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .original_Hex h2,
